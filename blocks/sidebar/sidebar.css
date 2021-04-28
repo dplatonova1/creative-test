@@ -1,0 +1,10 @@
+.sidebar {
+    background-color: #b33939;
+    opacity: 1;
+  }
+
+  @media screen and (max-width: 1200px){
+    .sidebar{
+      display: none;
+    }
+  }

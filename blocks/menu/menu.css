@@ -1,0 +1,30 @@
+.menu__items {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 500px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+}
+
+.menu__item {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.menu__item:hover {
+  transition: ease-in-out 0.3s;
+  background-color: #ff793f;
+}
+
+.menu__item-link {
+  text-decoration: none;
+  color: #f7f1e3;
+}

@@ -4,6 +4,8 @@ const leadItems = document.querySelector('.lead__items');
 const leadItemsArray = Array.from(leadItems.children);
 const switches = document.querySelector('.switches');
 const switchItemsArray = Array.from(switches.children);
+const inputs = document.querySelectorAll('input');
+// console.log(inputs)
 
 function hide(id){
   leadItemsArray[id].classList.toggle('hidden');
@@ -26,9 +28,9 @@ header.addEventListener("click", (event) => {
 
 
 switches.addEventListener('click', (event)=>{
-  // if(event.target.parentNode.closest('.switch__item-all')){
-  //   switchItemsArray.forEach(el=>el.closest('.switch__item').firstChild.nextSibling.children[0].checked='true')
-  // }
+  if(event.target.parentNode.closest('.switch__item-all')){
+    switchItemsArray.forEach(el=>el.closest('.switch__item').firstChild.nextSibling.children[0].checked='true')
+  }
   if(event.target.closest('.slider')){
     hide(switchItemsArray.indexOf(event.target.parentNode.parentNode))
   }
