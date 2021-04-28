@@ -1,0 +1,250 @@
+@font-face {
+  src: url(../fonts/Montserrat-Regular.ttf) format("truetype"),
+    url(../fonts/Montserrat-Regular.woff2) format("woff2"),
+    url(../fonts/Montserrat-Regular.woff) format("woff");
+  font-family: Montserrat;
+  font-weight: normal;
+}
+
+@font-face {
+  src: url(../fonts/Montserrat-Bold.ttf) format("truetype"),
+    url(../fonts/Montserrat-Bold.woff2) format("woff2"),
+    url(../fonts/Montserrat-Bold.woff) format("woff");
+  font-family: Montserrat;
+  font-weight: bold;
+}
+
+html {
+  background-color: #f7f1e3;
+}
+
+.page {
+  min-width: 320px;
+  max-width: 1920px;
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  font-size: 16px;
+  line-height: 1.375;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #2c2c54;
+}
+
+.header {
+  height: 80px;
+  background-color: #ffb142;
+  margin: 0;
+}
+
+.header__button {
+  border: none;
+  height: 100%;
+  width: 80px;
+  background-color: #ff5252;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.header__button:hover{
+  transition: ease-in-out 0.3s;
+  background-color: #b33939;
+}
+
+.content {
+  display: flex;
+}
+
+.lead{
+  width:100%;
+}
+
+.lead__title{
+  margin-left: 20px;
+}
+
+.lead__subtitle{
+  margin-left: 20px;
+}
+
+.lead__items {
+  background-color: #d1ccc0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 500px;
+  padding-top: 20px;
+}
+
+.lead__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffda79;
+  width: 300px;
+  height: 300px;
+  transition: ease-in-out 1s;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.lead__item:hover {
+  background-color: #ff793f;
+  flex-grow: 1;
+}
+
+.sidebar {
+  background-color: #b33939;
+  opacity: 1;
+}
+
+.menu__items {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 500px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+}
+
+.menu__item{
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.menu__item:hover{
+  transition: ease-in-out 0.3s;
+  background-color: #ff793f;
+}
+
+.menu__item-link{
+  text-decoration: none;
+  color: #f7f1e3;
+
+}
+
+.hidden{
+  transition: ease-in-out 0.5s;
+  /* opacity: 0; */
+  display: none;
+}
+
+.header__button span:first-of-type{
+  transform: translateY(15px) rotate(45deg);
+  transition: all 0.3s  ease-in-out;
+}
+
+.header__button span:nth-child(2){
+  transition: ease-in-out 0.3s;
+  opacity: 0;
+}
+
+.header__button span:last-of-type{
+  transform: translateY(-15px) rotate(-45deg);
+  transition: all 0.3s  ease-in-out;
+}
+
+span {
+  background-color:#f7f1e3;
+  border-radius: 5px;
+  margin: 5px;
+  width: 80%;
+  height: 5px;
+}
+
+.switches{
+margin: 20px;
+display: flex;
+justify-content: space-between;
+}
+
+.switch__item-all{
+  font-weight: bold;
+}
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #d1ccc0;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #ff5252;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #ff5252;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 1200px){
+  .sidebar{
+    display: none;
+  }
+}
