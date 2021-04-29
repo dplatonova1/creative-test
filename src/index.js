@@ -45,24 +45,32 @@ header.addEventListener("click", (event) => {
 });
 
 
-switches.addEventListener('click', (event)=>{
-  if(event.target.parentNode.closest('.switch__item-all')){
-    inputsArray.forEach(el=>{
-      if(el.checked){
-        el.checked=false
-      } else {
+switches.addEventListener("click", (event) => {
+  // event.stopPropagation();
+  // event.preventDefault();
+  // console.log(event.target)
+  if (
+    event.target.closest(".slider") &&
+    !event.target.parentNode.parentNode.classList.contains("switch__item-all")
+  ) {
+    checkInput(event.target.previousElementSibling, leadItemsArray[
+      inputsArray.indexOf(event.target.previousElementSibling)
+    ])
+  }
+  if (
+    event.target.parentNode.parentNode.classList.contains("switch__item-all")
+  ) {
+    if(event.target.previousElementSibling.checked){
+      inputsArray.forEach(el=>{
         el.checked=true
-      }
-      })
+       })
+    } else{
+      inputsArray.forEach(el=>{
+        el.checked=false
+       })
+    }
+    
   }
-  if(event.target.closest('.slider')){
-//     inputsArray.forEach(el=>{
-  // console.log(event.target.parentNode.parentNode)
-     checkInput(event.target.parentElement.firstChild.nextSibling, )
-//       checkInput(el)})
-//   //   hide(switchItemsArray.indexOf(event.target.parentNode.parentNode))
-  }
-  
 });
 
 // 2. Сделать функцию сдвига элементов массива вправо на N шагов
