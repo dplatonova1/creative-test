@@ -12,7 +12,6 @@ const sidebar = document.querySelector('.sidebar');
 const leadItems = document.querySelector('.lead__items');
 const leadItemsArray = Array.from(leadItems.children);
 const switches = document.querySelector('.switches');
-const switchItemsArray = Array.from(switches.children);
 const inputs = document.querySelectorAll('input');
 const inputsArray = Array.from(inputs);
 
@@ -23,11 +22,6 @@ function checkInput(input, item) {
     item.classList.remove('hidden')
   }
 }
-// inputsArray.forEach(el=>checkInput(el))
-
-// function hide(id){
-//   leadItemsArray[id].classList.toggle('hidden');
-// }
 
 header.addEventListener("click", (event) => {
   if ((event.target.closest(".header__button")) || (event.target.closest("span"))) {
@@ -46,30 +40,27 @@ header.addEventListener("click", (event) => {
 
 
 switches.addEventListener("click", (event) => {
-  // event.stopPropagation();
-  // event.preventDefault();
-  // console.log(event.target)
   if (
     event.target.closest(".slider") &&
     !event.target.parentNode.parentNode.classList.contains("switch__item-all")
   ) {
-    checkInput(event.target.previousElementSibling, leadItemsArray[
-      inputsArray.indexOf(event.target.previousElementSibling)
-    ])
+    setTimeout(() => {
+      checkInput(
+        event.target.previousElementSibling,
+        leadItemsArray[inputsArray.indexOf(event.target.previousElementSibling)]
+      );
+    }, 0);
   }
+
   if (
     event.target.parentNode.parentNode.classList.contains("switch__item-all")
   ) {
-    if(event.target.previousElementSibling.checked){
-      inputsArray.forEach(el=>{
-        el.checked=true
-       })
-    } else{
-      inputsArray.forEach(el=>{
-        el.checked=false
-       })
-    }
-    
+    setTimeout(() => {
+      inputsArray.forEach((el) => {
+        el.checked = event.target.previousElementSibling.checked;
+        checkInput(el, leadItemsArray[inputsArray.indexOf(el)]);
+      });
+    }, 0);
   }
 });
 
