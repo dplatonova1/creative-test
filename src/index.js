@@ -1,9 +1,9 @@
-import montserratbold from '../fonts/Montserrat-Bold.ttf';
-import montserratboldwoff from '../fonts/Montserrat-Bold.woff';
-import montserratboldwoff2 from '../fonts/Montserrat-Bold.woff2';
-import montserratregular from '../fonts/Montserrat-Regular.ttf';
-import montserratregularwoff from '../fonts/Montserrat-Regular.woff';
-import montserratregularwoff2 from '../fonts/Montserrat-Regular.woff2';
+import montserratbold from '../assets/fonts/Montserrat-Bold.ttf';
+import montserratboldwoff from '../assets/fonts/Montserrat-Bold.woff';
+import montserratboldwoff2 from '../assets/fonts/Montserrat-Bold.woff2';
+import montserratregular from '../assets/fonts/Montserrat-Regular.ttf';
+import montserratregularwoff from '../assets/fonts/Montserrat-Regular.woff';
+import montserratregularwoff2 from '../assets/fonts/Montserrat-Regular.woff2';
 import task_2 from './task-2';
 import task_3 from './task-3';
 
