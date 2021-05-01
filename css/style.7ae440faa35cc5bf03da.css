@@ -226,4 +226,4 @@ input:checked + .switch__item-slider:before {
   display: none;
 }
 
-@font-face{src:url(./assets/fonts/Montserrat-Regular.ttf) format("truetype"),url(./assets/fonts/Montserrat-Regular.woff2) format("woff2"),url(./assets/fonts/Montserrat-Regular.woff) format("woff");font-family:Montserrat;font-weight:400}@font-face{src:url(./assets/fonts/Montserrat-Bold.ttf) format("truetype"),url(./assets/fonts/Montserrat-Bold.woff2) format("woff2"),url(./assets/fonts/Montserrat-Bold.woff) format("woff");font-family:Montserrat;font-weight:700}html{background-color:#f7f1e3}
+@font-face{src:url(../assets/fonts/Montserrat-Regular.ttf) format("truetype"),url(../assets/fonts/Montserrat-Regular.woff2) format("woff2"),url(../assets/fonts/Montserrat-Regular.woff) format("woff");font-family:Montserrat;font-weight:400}@font-face{src:url(../assets/fonts/Montserrat-Bold.ttf) format("truetype"),url(../assets/fonts/Montserrat-Bold.woff2) format("woff2"),url(../assets/fonts/Montserrat-Bold.woff) format("woff");font-family:Montserrat;font-weight:700}html{background-color:#f7f1e3}
