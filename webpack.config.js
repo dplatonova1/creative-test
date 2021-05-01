@@ -6,7 +6,7 @@ module.exports = {
   entry: { main: './src/index.js' },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[chunkhash].js'
+    filename: './js/[name].[chunkhash].js'
   },
   module: {
     rules: [
@@ -19,17 +19,17 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use:  [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'] // добавили минификацию CSS
+        use:  [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
       },
       {
         test: /\.(eot|ttf|woff|woff2)$/,
-        loader: 'file-loader?name=./fonts/[name].[ext]'
+        loader: 'file-loader?name=./assets/fonts/[name].[ext]'
       },
     ]
   },
   plugins: [
     new MiniCssExtractPlugin({ // 
-      filename: 'style.[contenthash].css',
+      filename: './css/style.[contenthash].css',
     }),
     new HtmlWebpackPlugin({
       inject: false,

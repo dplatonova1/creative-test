@@ -1,4 +1,4 @@
-@import url("../blocks/page.css");
+@import url("./blocks/page.css");
 
 @font-face {
   src: url(../fonts/Montserrat-Regular.ttf) format("truetype"),
