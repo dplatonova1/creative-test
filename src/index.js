@@ -11,8 +11,6 @@ import "./style.css";
 
 const header = document.querySelector('.header');
 const sidebar = document.querySelector('.sidebar');
-const leadItems = document.querySelector('.lead__items');
-const leadItemsArray = Array.from(leadItems.children);
 const switches = document.querySelector('.switches');
 const inputs = document.querySelectorAll('input[data-id]');
 const inputsArray = Array.from(inputs);
@@ -24,6 +22,7 @@ function toggleInput(input, item) {
     item.classList.remove('hidden')
   }
 }
+
 
 header.addEventListener("click", (event) => {
   if ((event.target.closest(".header__button")) || (event.target.closest("span"))) {
@@ -43,11 +42,11 @@ header.addEventListener("click", (event) => {
 
 switches.addEventListener("change", (event) => {
   if(event.target.getAttribute('data-id')){
-    toggleInput(event.target, leadItemsArray[event.target.getAttribute('data-id')-1])
+    toggleInput(event.target, document.getElementById(event.target.getAttribute('data-id')))
   } else {
     inputsArray.forEach((el) => {
       el.checked = event.target.checked;
-      toggleInput(el, leadItemsArray[el.getAttribute('data-id')-1]);
+      toggleInput(el, document.getElementById(el.getAttribute('data-id')));
     });
   }
 });
