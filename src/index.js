@@ -1,3 +1,5 @@
+import "./style.css"; 
+
 import montserratbold from './assets/fonts/Montserrat-Bold.ttf';
 import montserratboldwoff from './assets/fonts/Montserrat-Bold.woff';
 import montserratboldwoff2 from './assets/fonts/Montserrat-Bold.woff2';
@@ -7,10 +9,10 @@ import montserratregularwoff2 from './assets/fonts/Montserrat-Regular.woff2';
 import task_2 from './task-2';
 import task_3 from './task-3';
 
-import "./style.css"; 
+
 
 const header = document.querySelector('.header');
-const sidebar = document.querySelector('.sidebar');
+const sidebar = document.querySelector('.sidebar')
 const switches = document.querySelector('.switches');
 const inputs = document.querySelectorAll('input[data-id]');
 const inputsArray = Array.from(inputs);
@@ -24,19 +26,8 @@ function toggleInput(input, item) {
 }
 
 
-header.addEventListener("click", (event) => {
-  if ((event.target.closest(".header__button")) || (event.target.closest("span"))) {
+header.addEventListener("change", () => {
     sidebar.classList.toggle("hidden");
-    let spans = Array.from(event.target.children);
-
-    spans.forEach((el) => {
-      if (sidebar.classList.contains("hidden")) {
-        el.setAttribute("style", "transform: none; opacity: 1");
-      } else {
-        el.removeAttribute('style', 'transform: none; opacity: 1')
-      }
-    });
-  }
 });
 
 

@@ -4,6 +4,7 @@
 @import url("./sidebar/sidebar.css");
 @import url("./menu/menu.css");
 @import url("./switches/switches.css");
+@import url("../assets/fonts.css");
 
 .page {
   min-width: 320px;

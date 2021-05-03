@@ -1,6 +1,5 @@
 .sidebar {
-    background-color: #b33939;
-    opacity: 1;
+    display: block;
   }
 
   @media screen and (max-width: 1200px){
